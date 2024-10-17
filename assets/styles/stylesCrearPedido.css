@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+.product-features {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.product-image {
+    width: 70%; /* Ajusta la imagen al ancho del contenedor */
+    height: 50%; /* Mantiene la proporción de la imagen */
+    margin-bottom: 15px; /* Espacio entre la imagen y el título */
+}
+
+.product-features h2 {
+    margin-bottom: 15px;
+}
+
+.product-features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-features li {
+    margin: 5px 0;
+}
+
+.order-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .product-features {
+        border-right: none; /* Eliminar el borde en pantallas pequeñas */
+        width: 100%; /* Tomar el ancho completo */
+        margin-bottom: 20px; /* Espacio entre secciones */
+    }
+
+    .order-form {
+        width: 100%; /* Tomar el ancho completo */
+    }
+}
